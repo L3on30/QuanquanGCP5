@@ -1,0 +1,8 @@
+#Task2
+
+
+docker run -p 8080:8080 valkyrie-dev:v0.0.3 &
+
+#Open new terminal then
+
+bash ~/marking/step2_v2.sh

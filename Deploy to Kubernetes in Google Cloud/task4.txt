@@ -1,0 +1,7 @@
+#Task4
+
+sed -i s#IMAGE_HERE#us-central1-docker.pkg.dev/qwiklabs-gcp-00-078d07525468/valkyrie-docker-repo/valkyrie-dev:v0.0.3#g k8s/deployment.yaml
+
+gcloud container clusters get-credentials valkyrie-dev --zone us-east1-d
+kubectl create -f k8s/deployment.yaml
+kubectl create -f k8s/service.yaml

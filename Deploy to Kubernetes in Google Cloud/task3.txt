@@ -1,0 +1,15 @@
+#Task3
+
+gcloud artifacts repositories create valkyrie-docker-repo \
+    --repository-format=docker \
+    --location=us-central1 \
+    --description="Google" \
+    --async 
+
+gcloud auth configure-docker LOCATION-docker.pkg.dev
+
+docker images
+
+docker tag f14036f6391e LOCATION-docker.pkg.dev/qwiklabs-gcp-00-078d07525468/valkyrie-docker-repo/valkyrie-dev:v0.0.3
+
+docker push LOCATION-docker.pkg.dev/qwiklabs-gcp-00-078d07525468/valkyrie-docker-repo/valkyrie-dev:v0.0.3
