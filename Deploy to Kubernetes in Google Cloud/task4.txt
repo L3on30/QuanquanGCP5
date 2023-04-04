@@ -1,4 +1,19 @@
-#Task4
+#Task 4
+
+"""
+Task 4. Create and expose a deployment in Kubernetes
+Kurt created the deployment.yaml and service.yaml to deploy your new container image to a Kubernetes cluster (called valkyrie-dev). The two files are in valkyrie-app/k8s.
+
+Get the Kubernetes credentials before you deploy the image onto the Kubernetes cluster.
+
+Before you create the deployments, make sure you check the deployment.yaml file. Kurt thinks they need some values set (he thinks he left some placeholder values).
+
+Create the deployments from the deployment.yaml and service.yaml files.
+
+From the Navigation Menu, select Kubernetes Engine > Services & Ingress. Click on the load balancer IP Address of the valkyrie-dev service to verify your services are up and running.
+"""
+
+
 
 sed -i s#IMAGE_HERE#us-central1-docker.pkg.dev/qwiklabs-gcp-00-078d07525468/valkyrie-docker-repo/valkyrie-dev:v0.0.3#g k8s/deployment.yaml
 

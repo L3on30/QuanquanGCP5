@@ -1,5 +1,32 @@
-
 #Task 1
+"""
+Task 1. Create a Docker image and store the Dockerfile
+Open Cloud Shell and run the following command. This will install the marking scripts you will use to help check your progress.
+
+source <(gsutil cat gs://cloud-training/gsp318/marking/setup_marking_v2.sh)
+Copied!
+Use Cloud Shell to clone the valkyrie-app source code repository into the ~/marking directory. You can use the following command:
+
+gcloud source repos clone valkyrie-app
+Copied!
+The app source code is in valkyrie-app/source.
+
+Create valkyrie-app/Dockerfile and add the configuration below:
+
+FROM golang:1.10
+WORKDIR /go/src/app
+COPY source .
+RUN go install -v
+ENTRYPOINT ["app","-single=true","-port=8080"]
+Copied!
+Use valkyrie-app/Dockerfile to create a Docker image called Image Name with the tag Tag name.
+
+Once you have created the Docker image, and before clicking Check my progress, run the following command to perform the local check of your work:
+
+bash ~/marking/step1_v2.sh
+"""
+
+
 
 source <(gsutil cat gs://cloud-training/gsp318/marking/setup_marking_v2.sh)
 

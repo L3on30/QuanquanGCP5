@@ -1,4 +1,16 @@
-#Task2
+#Task 2
+
+"""
+Task 2. Test the created Docker image
+Launch a container using the image Image with Tag.
+You need to map the host’s port 8080 to port 8080 on the container.
+Add & to the end of the command to cause the container to run in the background.
+When your container is running you will see the page by Web Preview.
+
+Once you have your container running, and before clicking Check my progress, run the following command to perform the local check of your work.
+
+bash ~/marking/step2_v2.sh
+"""
 
 
 docker run -p 8080:8080 valkyrie-dev:v0.0.3 &

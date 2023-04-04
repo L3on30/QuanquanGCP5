@@ -1,4 +1,17 @@
-#Task3
+#Task 3
+
+"""
+Task 3. Push the Docker image to the Artifact Registry
+Create a repository named Repository Name in Artifact Registry. Use Docker as the format and use the us-central1 region as the location.
+
+Before you can push or pull images, configure Docker to use the Google Cloud CLI to authenticate requests to Artifact Registry. You will need to set up authentication to Docker repositories in the us-central1 region.
+
+Re-tag the container to be able push it to the repository. The format should resemble the following: LOCATION-docker.pkg.dev/PROJECT-ID/REPOSITORY/IMAGE.
+
+Push the Docker image to the Artifact Registry.
+"""
+
+
 
 gcloud artifacts repositories create valkyrie-docker-repo \
     --repository-format=docker \
@@ -6,10 +19,10 @@ gcloud artifacts repositories create valkyrie-docker-repo \
     --description="Google" \
     --async 
 
-gcloud auth configure-docker LOCATION-docker.pkg.dev
+gcloud auth configure-docker us-central1-docker.pkg.dev
 
 docker images
 
-docker tag f14036f6391e LOCATION-docker.pkg.dev/qwiklabs-gcp-00-078d07525468/valkyrie-docker-repo/valkyrie-dev:v0.0.3
+docker tag f14036f6391e us-central1-docker.pkg.dev/qwiklabs-gcp-00-078d07525468/valkyrie-docker-repo/valkyrie-dev:v0.0.3
 
-docker push LOCATION-docker.pkg.dev/qwiklabs-gcp-00-078d07525468/valkyrie-docker-repo/valkyrie-dev:v0.0.3
+docker push us-central1-docker.pkg.dev/qwiklabs-gcp-00-078d07525468/valkyrie-docker-repo/valkyrie-dev:v0.0.3
