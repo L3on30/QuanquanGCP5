@@ -1,0 +1,13 @@
+#Task 1
+
+Create instance with name and location... N1 and f1-micro then allow HTTP and HTTPS
+
+#Task 2 $ Task 3
+
+Go to SSH of that VM instance type:
+sudo su -
+
+apt-get update
+apt-get install apache2 -y
+
+service --status-all

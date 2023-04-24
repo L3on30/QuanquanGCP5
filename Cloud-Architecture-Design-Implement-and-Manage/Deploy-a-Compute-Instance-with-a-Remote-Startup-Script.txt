@@ -1,0 +1,26 @@
+Navigation Menu -> Storage -> Create Bucket
+Name : [GCP Project Id]
+Create
+Upload files : Select file you downloaded in starting = resources-install-web.sh
+Edit permissions
+Add entry
+Entity : Public
+Name : allUsers
+Access : Reader
+
+If you get error in adding entity
+Go to Permssions Tab
+Change access to Fine-Grained
+
+Copy URL under Public Access
+
+Navigation Menu -> Compute Engine ->VM Instances->Click on lab monitor instance
+Metadata
+Key=startup-script-url
+Value=[Copied URL of Public access]
+Firewall - Check HTTP
+Save
+
+Click on External IP
+Add http://[External IP]
+Check My Progress
